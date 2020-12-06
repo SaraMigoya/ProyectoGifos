@@ -1,0 +1,175 @@
+// DESKTOP
+.dark {
+  background: #37383c;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+}
+
+.video, .fondo-gifo {
+  display: none;
+}
+
+.video-activo {
+  display: inline-block;
+  width: 65%;
+  margin-left: 109px;
+  margin-top: 37px;
+}
+
+#imagen {
+  display: inline-block;
+  width: 70%;
+  margin-top: 39px;
+  margin-left: 97px;
+ 
+}
+
+#p-subiendo {
+  font-family: $normal-font;
+  font-size: 15px;
+  color: #FFFFFF;
+  text-align: center;
+  margin-top: 0;
+}
+
+#div-iconos {
+  margin-left: 363px;
+  margin-top: 15px;
+
+}
+
+.iconos-gifos:first-child {
+  margin-right: 10px;
+}
+
+.subiendo-gifo {
+  display: inline-block;
+  width: 458px;
+  height: 305px;
+  position: relative;
+  background: rgba(87,46,229,0.70);
+  top: -309px;
+  margin-left: 97px;
+}
+
+
+.img-loader {
+  margin-top: 100px;
+  margin-bottom: 10px;
+  margin-left: 221px;
+  width: 22px;
+}
+.contenedor {
+  width: 46%;
+  height: 390px;
+  border: 1px solid;
+  border-color: $primary-color;
+
+  .dark & {
+    border-color: white;
+  }
+}
+
+
+.icono-camara {
+  order: -2;
+  margin-left: -191px;
+}
+
+.luz-camara {
+  order: -1;
+}
+
+#parrafo {
+  font-family: $alternative-font;
+  color: $secundary-color;
+  font-size: 1rem;
+  text-align: center;
+
+  .dark & {
+    color: white;
+  }
+}
+
+#div-gifos {
+  margin-left: 379px;
+  margin-top: 10px;
+}
+h1 {
+  width: 100%;
+  padding-top: 128px;
+}
+
+.sacar-texto {
+  display: none;
+}
+
+.linea-divisoria {
+  width: 795px;
+  background: $primary-color;
+  height: 5px;
+  border-radius: 300px;
+
+  .dark & {
+    background: white;
+  }
+}
+
+.seccion-grabar {
+  display: flex;
+
+  justify-content: center;
+}
+
+.paso-a-paso {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.paso-a-paso img {
+  padding-left: 20px;
+}
+.paso-a-paso img:last-child {
+  margin-left: 500px;
+  position: absolute;
+  top: 541px;
+}
+
+.btn-comenzar {
+  display: flex;
+  justify-content: center;
+}
+
+  button {
+  
+    width: 127px;
+    height: 50px;
+    border-radius: 40px;
+    border: 1px solid;
+    border-color: $primary-color;
+  
+    background: none;
+    font-family: $normal-font;
+    color: $primary-color;
+    font-size: 13px;
+    margin: 20px;
+
+  .dark & {
+    border-color: white;
+    color: white;
+  }
+}
+
+#parrafo span {
+  display: block;
+}
+
+
+.desaparecer {
+  display: none;
+}
+

@@ -1,0 +1,184 @@
+//Desktop
+@media screen and (min-width: 769px) {
+    body {
+        max-width: 1440px;
+    }
+
+    //Header
+    .guion-li,
+    .checkbox span {
+        display: none;
+    }
+
+    .logo {
+        width: 59px;
+        height: 59px;
+        margin-top: 0;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    ul img {
+        width: 54px;
+        margin-left: 30px;
+    }
+
+    ul {
+        display: flex;
+        position: relative;
+        background: transparent;
+        height: auto;
+        margin-top: 0;
+        align-items: center;
+
+        .dark & {
+            background-color: transparent;
+        }
+    }
+
+    .button-gifos {
+        display: inline;
+    }
+    li a {
+        color: $primary-color;
+        font-family: $normal-font;
+        font-size: 13px;
+        text-transform: uppercase;
+        display: block;
+        padding: 25px;
+    }
+
+    li a:active {
+        color: #9cafc3;
+    }
+
+    li a:hover {
+        text-decoration: underline $tertiary-color;
+
+        .dark & {
+            color: #ffffff;
+        }
+    }
+    //Section 1
+    #section1 h1 {
+        font-size: $big-font;
+        width: 40%;
+        line-height: 50px;
+    }
+
+    .buscador {
+        width: 40%;
+    }
+    //section 2
+    #section2 h2 {
+        font-size: 1.125rem;
+    }
+
+    #section2 p:first-of-type {
+        font-size: 1rem;
+    }
+
+    //section 3
+    #section3 h2 {
+        font-size: 1.5rem;
+    }
+
+    #section3 p {
+        font-size: 1.125rem;
+        line-height: 23px;
+        justify-content: center;
+    }
+
+    .gifos-section3 {
+        max-width: 357px;
+        height: 275px;
+        position: relative;
+    }
+
+
+    #section3 .container-carousel {
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .slider {
+        max-width: 40px;
+        cursor: pointer;
+    }
+
+    //mouseover
+    
+    #mouse {
+        margin-top: -206px;
+        width: 262px;
+        height: 202px;
+        position: relative;
+    }
+    
+
+
+    #mouse:hover {
+        background: rgba(87, 46, 229, 0.7);
+             #iconos {
+            
+                display: inline;
+            } 
+           
+    }
+   
+    #iconos {
+        width: 32px;
+        height: 32px;
+        
+        }
+
+    #iconos .icon-fav {
+            margin-left: 160px;
+          }
+        
+    //FOOTER
+
+    footer .container {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+
+    footer .icon {
+        margin-right: 1000px;
+    }
+
+    //seción de resultados de búsqueda de gifos
+
+    #section-resultados h1 {
+        @include titles;
+        width: 100%;
+        font-size: 35px;
+        display: flex;
+        justify-content: center;
+
+        .dark & {
+            color: #ffffff;
+        }
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 260px);
+
+        column-gap: 29px;
+        row-gap: 29px;
+    }
+
+    .grid-container img {
+        width: 260px;
+        height: 200px;
+    }
+}
+
+

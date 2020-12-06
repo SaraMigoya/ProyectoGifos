@@ -1,0 +1,141 @@
+
+.logo {
+      width: 49px;
+      height: 49px;
+      margin-left: 10px;
+      margin-top: 20px;
+  }
+
+
+  ul {
+    
+    list-style: none;
+    background: rgba(87,46,229,0.90);
+    width: 100%;
+    height: 0;
+    text-align: center;
+    position: absolute;
+   
+    
+
+    .dark & {
+      background-color:#000000;
+    }
+  
+  }
+  
+  .button-gifos {
+    display: none;
+}
+  li a {
+    font-family: $normal-font;
+    color: #FFFFFF ;
+    font-size: 15px;
+    text-decoration: none;
+    line-height: 60px;
+    font-weight: bold;
+    display: none;
+    
+    .dark & {
+      color: #FFFFFF;
+  }
+  }
+
+  
+  .checkbox {
+    width: 50px;
+    height: 30px;
+    position: relative;
+  }
+  
+  .checkbox #span1 {
+    position: absolute;
+    content: '';
+    background: $primary-color;
+    width: 20px;
+    height: 3px;
+    border-radius: 5px;
+
+    .dark & {
+      background: #FFFFFF;
+  }
+   
+  }
+  
+  .checkbox #span2 {
+    position: absolute;
+    content: '';
+    background: $primary-color;
+    width: 20px;
+    height: 3px;
+    border-radius: 5px;
+    top: 9px;
+
+    .dark & {
+      background: #FFFFFF;
+  }
+  }
+  
+  .checkbox #span3 {
+    position: absolute;
+    content: '';
+    background: $primary-color;
+    width: 20px;
+    height: 3px;
+    border-radius: 5px;
+    top: 18px;
+
+    .dark & {
+      background: #FFFFFF;
+  }
+  }
+  
+  #checkbox {
+    display: none;
+  }
+
+label {
+    width: 20%;
+    margin-left: 330px;
+    position: relative;
+    bottom: 50px;
+  }
+
+  #checkbox:checked ~ .checkbox #span1 {
+    transform: rotate(140deg);
+    top: 10px;
+  }
+  
+  #checkbox:checked ~ .checkbox #span2 {
+    opacity: 0;
+  }
+  
+  #checkbox:checked ~ .checkbox #span3 {
+    transform: rotate(-140deg);
+    top: 10px;
+  }
+  
+  #checkbox:checked ~ ul {
+    height: 100%;
+    max-width: 100%;
+    
+  }
+
+  
+  #checkbox:checked ~ ul a {
+    
+    display: block;
+  }
+
+
+  .guion-li {
+    display: flex;
+    margin-left: 153px;
+    width: 40px;
+    height: 0.1px;
+    background: transparent;
+  }
+
+  #checkbox:checked ~ ul .hola {
+    background: #FFFFFF;
+  }

@@ -1,0 +1,54 @@
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+    align-items: center;
+    font-family: $alternative-font;
+    color: $secundary-color;
+}
+
+footer p:first-child {
+    font-size: 15px;
+    margin-top: 50px;
+
+    .dark & {
+        color: #FFFFFF;
+    }
+}
+
+footer p:last-child {
+    font-size: 14px;
+    margin-top: 30px;
+    
+    .dark & {
+        color: #FFFFFF;
+    }
+
+}
+
+
+footer span {
+    color:  #CDD6E0;
+    display: inline;
+    padding: 8px;
+    margin: 0;
+    
+    .dark & {
+        color:#CDD6E0;
+    }
+}
+
+
+
+footer span:hover {
+    color: $primary-color;
+
+    .dark & {
+        color:#FFFFFF;
+    }
+}
+
+.remover {
+    display: none;
+}

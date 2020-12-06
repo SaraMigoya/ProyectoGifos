@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/027ad8fa8c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/crearGifos.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="line"></div>
+    <header>
+        <a href="index.html"><img src="assets/logo-mobile.svg" alt="Logo de la página" id="logo-noc" class="logo"></a>
+
+        <nav>
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox" class="checkbox">
+                <span id="span1"></span>
+                <span id="span2"></span>
+                <span id="span3"></span>
+            </label>
+
+            <ul>
+                <li><a id="btnDark" href="#">Modo Nocturno</a></li>
+                
+                <li id="guion-li"><a href="favoritos.html">Favoritos</a></li>
+               
+                <li><a href="gifos.html">Mis GIFOS</a></li>
+               
+                <li class="button-gifos"><a href="crearGifos.html"><img src="assets/CTA-crear-gifo-active.svg"
+                            id="btn-gifos" alt="boton para crear gifos"></a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <section>
+        
+            <div class="contenedor">
+                <video controls autoplay playsinline class="video" id="video"></video>
+                <img src="#" id="imagen" class="desaparecer" alt="">
+                <div class="fondo-gifo" id="div-fondo">
+                    <div id="div-iconos" class="desaparecer">
+                        <img src="./assets/icon-link-normal.svg" alt="Ícono de link" class="iconos-gifos" id="icono-link">
+                        <img src="./assets/icon-download.svg" alt="-Ícono de descarga" class="iconos-gifos" id="icono-descarga">
+                    </div>
+                    <img src="./assets/loader.svg" class="img-loader" alt="" id="imgLoader">
+                    <p id="p-subiendo" class="p-subir-gifo">Estamos subiendo tu GIFO</p>
+                </div>
+
+                <h1 id="titulo">Aquí podrás crear tus propios <span>GIFOS</span></h1>
+                <p id="parrafo">¡Crea tu GIFO en sólo 3 pasos! <span>(sólo necesitas una cámara para grabar un video)</span></p>
+            </div>
+        
+        <img src="./assets/camara.svg" alt="icono de una cámara" class="icono-camara" id="camara">
+        <img src="./assets/element-luz-camara.svg" alt="" class="luz-camara">
+    </section>
+    <section class="seccion-grabar">   
+ <div>
+        <div class="paso-a-paso">    
+                                     
+            <img src="./assets/paso-a-paso.svg" alt="" id="btnInicio">
+            <img src="./assets/paso-a-paso-copia.svg" alt="" id="dos">
+            <img src="assets/paso-a-paso-copia-2.svg" alt="" id="tres">
+            <img src="assets/pelicula.svg" alt="imagen de una cinta" id="pelicula">
+           
+        </div>        
+        <div class="linea-divisoria"></div>
+        <div class="btn-comenzar">
+           <button type="button" id="comenzar">COMENZAR</button>
+           <button type="button" id="btnRecord" class="desaparecer">grabar</button>
+           <button type="button" id="btnStop" class="desaparecer">FINALIZAR</button>
+           <button type="button" id="btnUpload" class="desaparecer">Subir gifo</button>
+        </div>
+    </div>
+    </section>       
+  
+
+    <footer>
+        <div class="container">
+            <p>Compartí en:</p>
+            <div class="icon">
+                <a href="https://www.instagram.com/"><span class="fab fa-instagram"></span></a>
+                <a href="https://www.facebook.com/"><span class="fab fa-facebook-f"></span></a>
+                <a href="https://twitter.com/"><span class="fab fa-twitter"></span></a>
+            </div>
+            <p> © GIFOS 2020 All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+   
+    <script src="scrips/crearGifos.js"></script>
+</body>
+
+</html>

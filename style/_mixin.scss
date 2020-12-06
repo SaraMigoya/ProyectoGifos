@@ -1,0 +1,24 @@
+    @mixin titles {
+    font-family: $normal-font;
+    color: $primary-color;
+}
+
+@mixin vermas {
+    font-family: $normal-font;
+    color: $primary-color;
+    font-weight: bold;
+    text-align: center;
+}
+
+@mixin sinResultados {
+    font-family: $normal-font;
+    color: $tertiary-color;
+    text-align: center;
+    line-height: 33px;
+    font-weight: bold;
+}
+/* @function rem($target, $context: $base-font-size) {
+    @if $target == 0 { @return 0}
+    @return $target / $context + 0rem;
+}
+ */

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/027ad8fa8c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style/favoritos.css">
+    <link rel="stylesheet" href="style/style.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="line"></div>
+    <header>
+        <a href="index.html"><img src="assets/logo-mobile.svg" alt="Logo de la página" id="logo-noc" class="logo"></a>
+
+        <nav>
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox" class="checkbox">
+                <span id="span1"></span>
+                <span id="span2"></span>
+                <span id="span3"></span>
+            </label>
+
+            <ul>
+                <li><a id="btnDark" href="#">Modo Nocturno</a></li>
+                
+                <li id="guion-li"><a href="favoritos.html" class="a-gray">Favoritos</a></li>
+                
+                <li><a href="gifos.html">Mis GIFOS</a></li>
+              
+                <li class="button-gifos"><a href="crearGifos.html"><img src="assets/button-crear-gifo.svg"
+                            id="btn-gifos" alt="boton para crear gifos"></a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+<main>
+    <section id="section1">
+        <div class="flex-container" style="display: none;">
+            <div class="buscador">
+                <input type="text" placeholder="Buscar GIFOS y más" class="search" id="input">
+                <img src="assets/icon-search.svg" alt="Ícono del buscador" id="icon-search">
+            </div>
+            <div id="divBuscador"></div>
+        </div>
+    </section>
+
+
+    <section id="titulos">
+        
+        <div class="icon-heart">
+            <img src="assets/icon-favoritos.svg" alt="icono de corazón">
+        </div>
+        <h1>Favoritos</h1>
+        <div class="grid-container" id="div-fav">
+          
+          <!--  aca van las imagenes fav -->
+        </div>
+        <div id="sin-contenido"></div>
+        <div id="p-sin-contenido"></div>
+        
+        <div class="div-vermas" id="divVermas"></div>
+
+    </section>
+
+
+    <section id="section2">
+        <div class="flex-container">
+
+            <h2>Trending:</h2>
+            <p>Reactions, Entertainment, Sports, Stickers, Artists</p>
+
+        </div>
+    </section>
+
+    <section id="section3">
+        <div class="fondo-gris">
+            <div class="flex-container">
+                <h2>Trending GIFOS</h2>
+                <p>Mirá los últimos <span> GIFOS de nuestra comunidad.</span></p>
+            </div>
+
+            <div class="container-carousel">
+                <div class="div-slider-left">
+                    <img src="assets/button-slider-left.svg" id="sliderLeft" class="slider" alt="">
+                </div>
+                <div class="div-carousel">
+                    <a href="expandir.html"><img src="#" id="imagenesGifos1" class="gifos-section3"
+                            alt="Imagen de un Gifo"></a>
+
+                </div>
+                <div class="div-carousel">
+                    <a href="expandir.html"><img src="#" id="imagenesGifos2" class="gifos-section3"
+                            alt="Imagen de un Gifo"></a>
+                </div>
+                <div class="div-carousel">
+                    <a href="expandir.html"><img src="#" id="imagenesGifos3" class="gifos-section3"
+                            alt="Imagen de un Gifo"></a>
+                </div>
+                <div class="div-slider-right">
+                    <img src="assets/Button-Slider-right.svg" id="sliderRight" class="slider" alt="">
+                </div>
+
+            </div>
+            <div id="hover" class="mouse">
+                <img src="assets/icon-fav.svg" id="icon-fav" alt="">
+                <img src="assets/icon-download.svg" id="icon-download" alt="">
+                <img src="assets/icon-max-normal.svg" class="icon-max" alt="">
+                <p>User</p>
+                <p>titulo</p>
+            </div>
+        </div>
+
+    </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>Compartí en:</p>
+            <div class="icon">
+                <a href="https://www.instagram.com/"><span class="fab fa-instagram"></span></a>
+                <a href="https://www.facebook.com/"><span class="fab fa-facebook-f"></span></a>
+                <a href="https://twitter.com/"><span class="fab fa-twitter"></span></a>
+            </div>
+            <p> © GIFOS 2020 All Rights Reserved.</p>
+        </div>
+    </footer>
+    <div class="line"></div>
+
+    <script src="scrips/utils.js"></script>
+   
+    <script src="scrips/favoritos.js"></script>
+
+</body>
+
+</html>

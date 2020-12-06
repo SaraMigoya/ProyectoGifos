@@ -1,0 +1,195 @@
+/* @function rem($target, $context: $base-font-size) {
+    @if $target == 0 { @return 0}
+    @return $target / $context + 0rem;
+}
+ */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto&display=swap");
+.dark {
+  background: #37383c;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.video, .fondo-gifo {
+  display: none;
+}
+
+.video-activo {
+  display: inline-block;
+  width: 65%;
+  margin-left: 109px;
+  margin-top: 37px;
+}
+
+#imagen {
+  display: inline-block;
+  width: 70%;
+  margin-top: 39px;
+  margin-left: 97px;
+}
+
+#p-subiendo {
+  font-family: "Montserrat";
+  font-size: 15px;
+  color: #FFFFFF;
+  text-align: center;
+  margin-top: 0;
+}
+
+#div-iconos {
+  margin-left: 363px;
+  margin-top: 15px;
+}
+
+.iconos-gifos:first-child {
+  margin-right: 10px;
+}
+
+.subiendo-gifo {
+  display: inline-block;
+  width: 458px;
+  height: 305px;
+  position: relative;
+  background: rgba(87, 46, 229, 0.7);
+  top: -309px;
+  margin-left: 97px;
+}
+
+.img-loader {
+  margin-top: 100px;
+  margin-bottom: 10px;
+  margin-left: 221px;
+  width: 22px;
+}
+
+.contenedor {
+  width: 46%;
+  height: 390px;
+  border: 1px solid;
+  border-color: #572EE5;
+}
+
+.dark .contenedor {
+  border-color: white;
+}
+
+.icono-camara {
+  -webkit-box-ordinal-group: -1;
+      -ms-flex-order: -2;
+          order: -2;
+  margin-left: -191px;
+}
+
+.luz-camara {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+}
+
+#parrafo {
+  font-family: "Roboto";
+  color: #000000;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.dark #parrafo {
+  color: white;
+}
+
+#div-gifos {
+  margin-left: 379px;
+  margin-top: 10px;
+}
+
+h1 {
+  width: 100%;
+  padding-top: 128px;
+}
+
+.sacar-texto {
+  display: none;
+}
+
+.linea-divisoria {
+  width: 795px;
+  background: #572EE5;
+  height: 5px;
+  border-radius: 300px;
+}
+
+.dark .linea-divisoria {
+  background: white;
+}
+
+.seccion-grabar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.paso-a-paso {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+}
+
+.paso-a-paso img {
+  padding-left: 20px;
+}
+
+.paso-a-paso img:last-child {
+  margin-left: 500px;
+  position: absolute;
+  top: 541px;
+}
+
+.btn-comenzar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+button {
+  width: 127px;
+  height: 50px;
+  border-radius: 40px;
+  border: 1px solid;
+  border-color: #572EE5;
+  background: none;
+  font-family: "Montserrat";
+  color: #572EE5;
+  font-size: 13px;
+  margin: 20px;
+}
+
+.dark button {
+  border-color: white;
+  color: white;
+}
+
+#parrafo span {
+  display: block;
+}
+
+.desaparecer {
+  display: none;
+}
+/*# sourceMappingURL=crearGifos.css.map */
