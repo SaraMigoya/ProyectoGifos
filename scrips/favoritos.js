@@ -2,11 +2,7 @@
 arrayFavoritos= localStorage.getItem("arrayFavoritos")
 arrayFavoritos = JSON.parse(arrayFavoritos)
 
-arrayFavNom = localStorage.getItem("arrayFavNom")
-arrayFavNom = JSON.parse(arrayFavNom)
 
-arrayFavU = localStorage.getItem("arrayFavU")
-arrayFavU = JSON.parse(arrayFavU)
 
 arrayUserName = localStorage.getItem("arrayUserName")
 arrayUserName = JSON.parse(arrayUserName)
@@ -15,6 +11,13 @@ arrayTitulos = localStorage.getItem("arrayTitulos")
 arrayTitulos = JSON.parse(arrayTitulos)
 //favoritos sin contenido
 
+
+if (localStorage.getItem("arrayFavoritos")){
+    var arrayFavoritos = localStorage.getItem("arrayFavoritos")
+    arrayFavoritos = JSON.parse(arrayFavoritos)
+}else{
+    var arrayFavoritos = []
+}
 
 if (arrayFavoritos == "null" || arrayFavoritos.length == 0){ 
     let sinFavoritos = document.createElement("img")
@@ -98,12 +101,7 @@ if (arrayFavoritos == "null" || arrayFavoritos.length == 0){
             iconMax.addEventListener("mouseover", () => {
                 localStorage.setItem("img", arrayFavoritos[i])
 
-               // localStorage.setItem("tituloImg", arrayFavNom[i])
-                //localStorage.setItem("user", arrayFavU[i])
-                
-
                 iconMax.src = "./assets/icon-max-hover.svg"
-
                 let a = document.createElement("a")
                 a.href = "expandir.html"
                 a.appendChild(iconMax)
@@ -125,7 +123,7 @@ if (arrayFavoritos == "null" || arrayFavoritos.length == 0){
     if (arrayFavoritos.length > 12) {
         let divVerMas = document.getElementById("divVermas")
         let div = document.createElement("div")
-      /*   divVerMas.appendChild(div)  */
+
 
         let buttonVermas = document.createElement("img")
         buttonVermas.id = "imagen-vermas"
