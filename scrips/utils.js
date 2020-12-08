@@ -81,7 +81,7 @@ modoNocturno();
 //SECCION 3 - TRENDINGS
 //funcion que obtiene la información de los trendings y la convierte en json
 async function insertarGifos() {
-    let trendingGifs = "http://api.giphy.com/v1/gifs/trending?api_key=YaOhho0nfvtDv9KxcBH64ng3iVX6VW9a&limit=12"
+    let trendingGifs = "https://api.giphy.com/v1/gifs/trending?api_key=YaOhho0nfvtDv9KxcBH64ng3iVX6VW9a&limit=12"
     try {
 
         let response = await fetch(trendingGifs);

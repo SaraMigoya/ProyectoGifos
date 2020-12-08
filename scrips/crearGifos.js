@@ -100,7 +100,7 @@ btnUpload.addEventListener('click', () => {
     btnUpload.classList.add("desaparecer")
 
     // enviar gifo.
-    fetch("http://upload.giphy.com/v1/gifs?api_key=YaOhho0nfvtDv9KxcBH64ng3iVX6VW9a",
+    fetch("https://upload.giphy.com/v1/gifs?api_key=YaOhho0nfvtDv9KxcBH64ng3iVX6VW9a",
         {
             method: 'POST',
             body: form

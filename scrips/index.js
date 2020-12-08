@@ -94,7 +94,7 @@ async function autoCompletar(textoIngresado, numero) {
 
     try {
 
-        let searchGifos = `http://api.giphy.com/v1/gifs/search?api_key=YaOhho0nfvtDv9KxcBH64ng3iVX6VW9a&q=${textoIngresado}&limit=12&offset=${numero}`;
+        let searchGifos = `https://api.giphy.com/v1/gifs/search?api_key=YaOhho0nfvtDv9KxcBH64ng3iVX6VW9a&q=${textoIngresado}&limit=12&offset=${numero}`;
         let autocompletado = await fetch(searchGifos);
         return autocompletado.json()
     }
