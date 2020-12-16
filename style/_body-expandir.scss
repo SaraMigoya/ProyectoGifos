@@ -37,8 +37,8 @@ body {
 
 #icon-fav, #icon-download  {
     border: 1px solid #CED7E1;
-border-radius: 6px;
-border-radius: 6px;
+    border-radius: 6px;
+    border-radius: 6px;
 }
 
 #icon-fav {
@@ -134,6 +134,12 @@ border-radius: 6px;
         float: right;
         width: 32%;
         margin-top: 15px;
+    }
+
+    .flex-container {
+        display: flex;
+        margin-top: 15px;
+        width: 90%;
     }
 }
 

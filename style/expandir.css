@@ -137,5 +137,12 @@ body {
     width: 32%;
     margin-top: 15px;
   }
+  .flex-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 15px;
+    width: 90%;
+  }
 }
 /*# sourceMappingURL=expandir.css.map */

@@ -326,9 +326,10 @@ h1 span {
 }
 
 .hover-trending {
-  max-width: 176px;
-  margin-top: -124px;
-  height: 121px;
+  max-width: 188px;
+  margin-top: -202px;
+  height: 186px;
+  margin-left: 10px;
   position: relative;
 }
 
@@ -668,14 +669,13 @@ label {
     width: 260px;
     height: 200px;
   }
-}
-
-.hover-trending {
-  max-width: 238px;
-  margin-top: -289px;
-  margin-left: 8px;
-  height: 276px;
-  position: relative;
+  .hover-trending {
+    max-width: 238px;
+    margin-top: -289px;
+    margin-left: 8px;
+    height: 276px;
+    position: relative;
+  }
 }
 
 .container {
