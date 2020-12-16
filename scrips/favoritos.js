@@ -7,8 +7,8 @@ arrayFavoritos = JSON.parse(arrayFavoritos)
 arrayUserName = localStorage.getItem("arrayUserName")
 arrayUserName = JSON.parse(arrayUserName)
 
-arrayTitulos = localStorage.getItem("arrayTitulos")
-arrayTitulos = JSON.parse(arrayTitulos)
+//arrayTitulos = localStorage.getItem("arrayTitulos")
+//arrayTitulos = JSON.parse(arrayTitulos)
 //favoritos sin contenido
 
 
@@ -18,6 +18,9 @@ if (localStorage.getItem("arrayFavoritos")){
 }else{
     var arrayFavoritos = []
 }
+
+
+
 
 if (arrayFavoritos == "null" || arrayFavoritos.length == 0){ 
     let sinFavoritos = document.createElement("img")
@@ -49,7 +52,7 @@ if (arrayFavoritos == "null" || arrayFavoritos.length == 0){
 
             // creo el div para el mousehover
             let divHover = document.createElement("div")
-            divHover.id = "mouse"
+            divHover.className = "mouse"
 
             // creo los iconos de fav, download y exp
             let iconFav = document.createElement("img")
@@ -100,6 +103,7 @@ if (arrayFavoritos == "null" || arrayFavoritos.length == 0){
             // evento max
             iconMax.addEventListener("mouseover", () => {
                 localStorage.setItem("img", arrayFavoritos[i])
+               
 
                 iconMax.src = "./assets/icon-max-hover.svg"
                 let a = document.createElement("a")

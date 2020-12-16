@@ -36,7 +36,7 @@ let iconFav = document.getElementById("icon-fav")
 
 
 iconFav.addEventListener("click", () => {
-
+    iconFav.src = "./assets/icon-fav-active.svg"
     if(localStorage.getItem("arrayFavoritos")) {
         let arrayFavoritos = localStorage.getItem("arrayFavoritos")
         arrayFavoritos = JSON.parse(arrayFavoritos)

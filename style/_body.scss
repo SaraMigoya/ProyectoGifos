@@ -137,7 +137,7 @@ line-height: 25px;
  #imagen-sin-resultado  {
     display: flex;
     justify-content: center;   
-    width: 100px;
+    width: 100%;
 } 
 //Sectionn 2
 #section2 h2 {
@@ -276,7 +276,7 @@ line-height: 25px;
 
   //mouseover
     
-  #mouse {
+  .mouse {
 
     max-width: 100%;;
     margin-top: -124px;
@@ -286,7 +286,7 @@ line-height: 25px;
 
 
 
-#mouse:hover {
+.mouse:hover {
     background: rgba(87, 46, 229, 0.7);
          #iconos {
         

@@ -9,7 +9,7 @@ let input = document.getElementById("input")
 let probando = document.getElementById("probando")
 
 
-input.addEventListener("input", async (e) => {
+input.addEventListener("keyup", async (e) => {
 
     cerrarDiv("#divSugerencias")
 
@@ -34,7 +34,6 @@ input.addEventListener("input", async (e) => {
 
     }
 
-
     //CREO LOS DIVS PARA LOS TITULOS SUGERIDOS
     let div = document.createElement("div")
     div.setAttribute("class", "div-search")
@@ -47,7 +46,6 @@ input.addEventListener("input", async (e) => {
     arrayTitulos = []
     arrayUserName = []
 
-    console.log(arrayGifos)
 
     arrayCompletado.data.forEach(element => {
         arrayTitulos.push(element.title);
@@ -61,7 +59,7 @@ input.addEventListener("input", async (e) => {
 
     for (let i = 0; i < 4; i++) {
 
-        if (arrayTitulos[i].toLowerCase().includes(textoIngresado.toLowerCase())) {
+        if (arrayTitulos[i].toLowerCase().includes(textoIngresado)) {
 
             let elementoLista = document.createElement("div")
             elementoLista.id = "lista"
@@ -76,17 +74,21 @@ input.addEventListener("input", async (e) => {
 
             elementoLista.addEventListener("click", () => {
                 input.value = elementoLista.innerText;
+                
                 iconSearch.src = "assets/icon-search.svg"
-
-                search();
+                
+                //search();
             })
         }
 
+        if (e.keyCode == 13) {
+            search()
+            iconSearch.src = "assets/icon-search.svg"
+        }
     };
+   
 
 });
-
-
 
 
 let numero = 0
@@ -101,21 +103,8 @@ async function autoCompletar(textoIngresado, numero) {
 
     catch {
         alert("algo salió mal")
-
-
     }
 }
-
-
-
-//Evento que asocia la búsqueda del input con enter 
-input.addEventListener("keypress", function (event) {
-    event.keyCode
-
-    if (event.keyCode == 13) {
-        search()
-    }
-});
 
 
 
@@ -169,7 +158,7 @@ function search() {
 
         // creo el div para el mousehover
         let divHover = document.createElement("div")
-        divHover.id = "mouse"
+        divHover.className = "mouse"
 
 
         // creo los iconos de fav, download y exp
@@ -179,7 +168,7 @@ function search() {
 
         iconFav.id = "iconos"
         iconFav.className = "icon-fav"
-        iconDownload.id = "iconos"
+        iconDownload.id= "iconos"
         iconMax.id = "iconos"
 
         iconFav.src = "./assets/icon-fav.svg"
@@ -198,7 +187,7 @@ function search() {
 
         //evento que agrega a favoritos los gifos de la busqueda
         iconFav.addEventListener("click", () => {
-         
+            iconFav.src = "./assets/icon-fav-active.svg"
 
             if (localStorage.getItem("arrayFavoritos")) {
                 let arrayFavoritos = localStorage.getItem("arrayFavoritos")
@@ -212,7 +201,7 @@ function search() {
                 localStorage.setItem("arrayFavoritos", JSON.stringify(arrayFavoritos))
 
                 //arrayTitulos.push(arrayGifos[i])
-                localStorage.setItem("arrayTitulos", JSON.stringify(arrayTitulos))
+                //localStorage.setItem("arrayTitulos", JSON.stringify(arrayTitulos))
 
             } else {
                 let arrayFavoritos = []
@@ -240,7 +229,6 @@ function search() {
             iconMax.src = "./assets/icon-max-hover.svg"
 
 
-    
             let a = document.createElement("a")
             a.href = "expandir.html"
             a.appendChild(iconMax)
@@ -317,12 +305,13 @@ function cerrarDiv(x) {
 //Evento que elimina todas las sugerencias con la cruz
 iconSearch.addEventListener("click", () => {
 
-    if (iconSearch.src = "assets/close.svg") {
+    if (iconSearch.src = "./assets/close.svg") {
 
         cerrarDiv("#divSugerencias")
         probando.classList.remove("buscador-expandido")
 
     }
+
 
     //modifico el icono close a modo nocturno
     if (localStorage.getItem("dark-mode") == "true") {

@@ -168,7 +168,7 @@ h1 span {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100px;
+  width: 100%;
 }
 
 #section2 h2 {
@@ -318,18 +318,18 @@ h1 span {
   margin-left: 1px;
 }
 
-#mouse {
+.mouse {
   max-width: 100%;
   margin-top: -124px;
   height: 121px;
   position: relative;
 }
 
-#mouse:hover {
+.mouse:hover {
   background: rgba(87, 46, 229, 0.7);
 }
 
-#mouse:hover #iconos {
+.mouse:hover #iconos {
   display: inline;
 }
 
@@ -583,16 +583,16 @@ label {
     max-width: 40px;
     cursor: pointer;
   }
-  #mouse {
+  .mouse {
     margin-top: -206px;
     width: 262px;
     height: 202px;
     position: relative;
   }
-  #mouse:hover {
+  .mouse:hover {
     background: rgba(87, 46, 229, 0.7);
   }
-  #mouse:hover #iconos {
+  .mouse:hover #iconos {
     display: inline;
   }
   #iconos {

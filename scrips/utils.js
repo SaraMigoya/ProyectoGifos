@@ -96,6 +96,17 @@ let arrayImagenes;
 let arrayTituloGifos;
 let arrayUser;
 
+let iconFav1 = document.getElementById("icon-fav1")
+let iconFav2 = document.getElementById("icon-fav2")
+let iconFav3 = document.getElementById("icon-fav3")
+let iconDownload1 = document.getElementById("icon-download1")
+let iconDownload2 = document.getElementById("icon-download2")
+let iconDownload3 = document.getElementById("icon-download3")
+let iconMax1 = document.getElementById("icon-max1")
+let iconMax2 = document.getElementById("icon-max2")
+let iconMax3 = document.getElementById("icon-max3")
+
+
 async function main() {
 
     arrayImagenes = []
@@ -112,31 +123,113 @@ async function main() {
 
         }
 
-     
+
+        
         let imagenesGifos1 = document.getElementById("imagenesGifos1");
         let imagenesGifos2 = document.getElementById("imagenesGifos2");
         let imagenesGifos3 = document.getElementById("imagenesGifos3");
         imagenesGifos1.src = arrayImagenes[0];
         imagenesGifos2.src = arrayImagenes[1];
-        imagenesGifos3.src = arrayImagenes[2]; //cambiar nombre de arrayimagenes
+        imagenesGifos3.src = arrayImagenes[2];
+
+
+        if (iconFav1)
+        iconFav1.addEventListener("click", () => {
+            iconFav1.src = "./assets/icon-fav-active.svg"
+
+            if (localStorage.getItem("arrayFavoritos")) {
+                let arrayFavoritos = localStorage.getItem("arrayFavoritos")
+                arrayFavoritos = JSON.parse(arrayFavoritos)
+
+                //let arrayTitulos = localStorage.getItem("arrayTitulos")
+               // arrayTitulos = JSON.parse(arrayTitulos)
+               localStorage.removeItem("tituloImg")
+         
+               localStorage.setItem("tituloImg", `${arrayTituloGifos[0]}`)
+
+                arrayFavoritos.push(arrayImagenes[0])
+                localStorage.setItem("arrayFavoritos", JSON.stringify(arrayFavoritos))
 
 
 
-    
-        arrayTituloGifos = [];
-        resultado.data.forEach(element => {
-            arrayTituloGifos.push(element.title)
+            } else {
+                let arrayFavoritos = []
+
+                arrayFavoritos.push(arrayImagenes[0])
+                localStorage.setItem("arrayFavoritos", JSON.stringify(arrayFavoritos));
+            }
+        });
+        if (iconFav2)
+        iconFav2.addEventListener("click", () => {
+            iconFav2.src = "./assets/icon-fav-active.svg"
+
+            if (localStorage.getItem("arrayFavoritos")) {
+                let arrayFavoritos = localStorage.getItem("arrayFavoritos")
+                arrayFavoritos = JSON.parse(arrayFavoritos)
+
+               // let arrayTitulos = localStorage.getItem("arrayTitulos")
+               // arrayTitulos = JSON.parse(arrayTitulos)
+
+
+                arrayFavoritos.push(arrayImagenes[1])
+                localStorage.setItem("arrayFavoritos", JSON.stringify(arrayFavoritos))
+
+
+            } else {
+                let arrayFavoritos = []
+
+                arrayFavoritos.push(arrayImagenes[1])
+                localStorage.setItem("arrayFavoritos", JSON.stringify(arrayFavoritos));
+            }
+        });
+        if (iconFav3)
+        iconFav3.addEventListener("click", () => {
+            iconFav3.src = "./assets/icon-fav-active.svg"
+
+            if (localStorage.getItem("arrayFavoritos")) {
+                let arrayFavoritos = localStorage.getItem("arrayFavoritos")
+                arrayFavoritos = JSON.parse(arrayFavoritos)
+
+              //  let arrayTitulos = localStorage.getItem("arrayTitulos")
+               // arrayTitulos = JSON.parse(arrayTitulos)
+
+
+                arrayFavoritos.push(arrayImagenes[2])
+                localStorage.setItem("arrayFavoritos", JSON.stringify(arrayFavoritos))
+
+
+            } else {
+                let arrayFavoritos = []
+
+                arrayFavoritos.push(arrayImagenes[2])
+                localStorage.setItem("arrayFavoritos", JSON.stringify(arrayFavoritos));
+            }
         });
 
-      
-        arrayUser = []
+    
+        //evento de descarga
+        if (iconDownload1)
+        iconDownload1.addEventListener("click", () => {
+        downloadGif(arrayImagenes[0])
+    
+         });
 
-        resultado.data.forEach(element => {
-            arrayUser.push(element.username)
-        })
+        //evento de descarga
+        if (iconDownload2)
+        iconDownload2.addEventListener("click", () => {
+            downloadGif(arrayImagenes[1])
+        
+        });
+        //evento de descarga
+        if (iconDownload3)
+        iconDownload3.addEventListener("click", () => {
+        downloadGif(arrayImagenes[2])
+    
+        });
 
-       
-        imagenesGifos1.addEventListener("click", () => {
+        //evento expandir
+        if(iconMax1)
+           iconMax1.addEventListener("click", () => {
             localStorage.removeItem("img")
             localStorage.removeItem("tituloImg")
             localStorage.removeItem("user")
@@ -148,7 +241,10 @@ async function main() {
 
 
         });
-        imagenesGifos2.addEventListener("click", () => {
+
+      
+        if(iconMax2)
+         iconMax2.addEventListener("click", () => {
             localStorage.removeItem("img")
             localStorage.removeItem("tituloImg")
             localStorage.removeItem("user")
@@ -159,7 +255,8 @@ async function main() {
             localStorage.setItem("user", `${arrayUser[1]}`)
 
         });
-        imagenesGifos3.addEventListener("click", () => {
+        if(iconMax3)
+        iconMax3.addEventListener("click", () => {
             localStorage.removeItem("img")
             localStorage.removeItem("tituloImg")
             localStorage.removeItem("user")
@@ -170,6 +267,22 @@ async function main() {
             localStorage.setItem("user", `${arrayUser[2]}`)
 
         });
+
+
+        arrayTituloGifos = [];
+        resultado.data.forEach(element => {
+            arrayTituloGifos.push(element.title)
+        });
+
+      
+       // arrayUser = []
+
+        //resultado.data.forEach(element => {
+            //arrayUser.push(element.username)
+       // })
+
+       
+ 
     }
 
     catch (error) {
@@ -206,7 +319,7 @@ function cambiarImagen(numero) {
 
 
     //obtengo los titulos de los gifos expandidos
-    imagenesGifos1.addEventListener("click", () => {
+   iconMax1.addEventListener("click", () => {
         localStorage.removeItem("user")
         localStorage.removeItem("tituloImg")
 
@@ -214,7 +327,7 @@ function cambiarImagen(numero) {
         localStorage.setItem("user", `${arrayUser[posicionActual]}`)
 
     });
-    imagenesGifos2.addEventListener("click", () => {
+    iconMax2.addEventListener("click", () => {
         localStorage.removeItem("user")
         localStorage.removeItem("tituloImg")
 
@@ -222,7 +335,7 @@ function cambiarImagen(numero) {
         localStorage.setItem("user", `${arrayUser[posicionActual + 1]}`)
 
     });
-    imagenesGifos3.addEventListener("click", () => {
+    iconMax3.addEventListener("click", () => {
         localStorage.removeItem("user")
         localStorage.removeItem("tituloImg")
 
@@ -230,6 +343,75 @@ function cambiarImagen(numero) {
         localStorage.setItem("user", `${arrayUser[posicionActual + 2]}`)
 
     });
+
+    //evento de descarga
+    iconDownload1.addEventListener("click", () => {
+     downloadGif(arrayImagenes[posicionActual])
+
+        });
+
+        //evento de descarga
+    iconDownload2.addEventListener("click", () => {
+        downloadGif(arrayImagenes[posicionActual + 1])
+
+        });
+        //evento de descarga
+    iconDownload3.addEventListener("click", () => {
+        downloadGif(arrayImagenes[posicionActual + 2])
+
+        });
+
+    /*iconFav1.addEventListener("click", () => {
+        iconFav1.src = "./assets/icon-fav-active.svg"
+
+    
+        if (localStorage.getItem("arrayFavoritos")) {
+            let arrayFavoritos = localStorage.getItem("arrayFavoritos")
+            arrayFavoritos = JSON.parse(arrayFavoritos)
+
+            let arrayTitulos = localStorage.getItem("arrayTitulos")
+            arrayTitulos = JSON.parse(arrayTitulos)
+
+
+            arrayFavoritos.push(arrayImagenes[posicionActual])
+            localStorage.setItem("arrayFavoritos", JSON.stringify(arrayFavoritos))
+
+            //arrayTituloGifos.push(arrayImagenes[0])
+            localStorage.setItem("tituloImg", JSON.stringify(arrayTituloGifos))
+
+        } else {
+            let arrayFavoritos = []
+
+            arrayFavoritos.push(arrayImagenes[posicionActual])
+            localStorage.setItem("arrayFavoritos", JSON.stringify(arrayFavoritos));
+        }
+    });
+
+
+    iconFav2.addEventListener("click", () => {
+        iconFav2.src = "./assets/icon-fav-active.svg"
+
+        if (localStorage.getItem("arrayFavoritos")) {
+            let arrayFavoritos = localStorage.getItem("arrayFavoritos")
+            arrayFavoritos = JSON.parse(arrayFavoritos)
+
+            let arrayTitulos = localStorage.getItem("arrayTitulos")
+            arrayTitulos = JSON.parse(arrayTitulos)
+
+
+            arrayFavoritos.push(arrayImagenes[posicionActual + 1])
+            localStorage.setItem("arrayFavoritos", JSON.stringify(arrayFavoritos))
+
+            //arrayTituloGifos.push(arrayImagenes[0])
+            localStorage.setItem("tituloImg", JSON.stringify(arrayTituloGifos))
+
+        } else {
+            let arrayFavoritos = []
+
+            arrayFavoritos.push(arrayImagenes[posicionActual + 1])
+            localStorage.setItem("arrayFavoritos", JSON.stringify(arrayFavoritos));
+        }
+    });*/
 
 }
 

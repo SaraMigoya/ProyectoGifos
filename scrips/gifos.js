@@ -48,7 +48,7 @@ async function main() {
 
         // creo el div para el mousehover
         let divHover = document.createElement("div")
-        divHover.id = "mouse"
+        divHover.className = "mouse"
 
         // creo los iconos de fav, download y exp
         let iconTrash = document.createElement("img")
