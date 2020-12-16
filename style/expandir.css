@@ -46,8 +46,14 @@ body {
           justify-content: space-evenly;
 }
 
-.icon-max {
-  display: none;
+#icon-fav, #icon-download {
+  border: 1px solid #CED7E1;
+  border-radius: 6px;
+  border-radius: 6px;
+}
+
+#icon-fav {
+  margin-right: 10px;
 }
 
 .user {
@@ -125,6 +131,11 @@ body {
   }
   .close {
     margin-left: 1000px;
+  }
+  .iconos {
+    float: right;
+    width: 32%;
+    margin-top: 15px;
   }
 }
 /*# sourceMappingURL=expandir.css.map */

@@ -107,7 +107,7 @@ if (arrayFavoritos == "null" || arrayFavoritos.length == 0){
 
                 iconMax.src = "./assets/icon-max-hover.svg"
                 let a = document.createElement("a")
-                a.href = "expandir.html"
+                a.href = "favoritos-exp.html"
                 a.appendChild(iconMax)
                 divHover.appendChild(a)
 
@@ -115,7 +115,7 @@ if (arrayFavoritos == "null" || arrayFavoritos.length == 0){
 
             iconMax.addEventListener("click", () => {
 
-                a.href = "expandir.html"
+                a.href = "favoritos-exp.html"
 
             });
         };
@@ -202,7 +202,7 @@ if (arrayFavoritos == "null" || arrayFavoritos.length == 0){
                 iconMax.src = "./assets/icon-max-hover.svg"
 
                 let a = document.createElement("a")
-                a.href = "expandir.html"
+                a.href = "favoritos-exp.html"
                 a.appendChild(iconMax)
                 divHover.appendChild(a)
 
@@ -210,7 +210,7 @@ if (arrayFavoritos == "null" || arrayFavoritos.length == 0){
 
             iconMax.addEventListener("click", () => {
 
-                a.href = "expandir.html"
+                a.href = "favoritos-exp.html"
 
             });
        
@@ -288,7 +288,7 @@ if (arrayFavoritos == "null" || arrayFavoritos.length == 0){
                         iconMax.src = "./assets/icon-max-hover.svg"
 
                         let a = document.createElement("a")
-                        a.href = "expandir.html"
+                        a.href = "favoritos-exp.html"
                         a.appendChild(iconMax)
                         divHover.appendChild(a)
 
@@ -296,7 +296,7 @@ if (arrayFavoritos == "null" || arrayFavoritos.length == 0){
 
                     iconMax.addEventListener("click", () => {
 
-                        a.href = "expandir.html"
+                        a.href = "favoritos-exp.html"
 
                     });
 

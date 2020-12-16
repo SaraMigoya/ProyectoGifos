@@ -191,7 +191,7 @@ line-height: 25px;
 .gifos-section3 {
     max-width: 234px;
     height: 187px;
-    padding: 10px;
+   margin: 10px;
    
 }
 
@@ -284,7 +284,32 @@ line-height: 25px;
     position: relative;
 }
 
+.hover-trending {
 
+    max-width: 176px;
+    margin-top: -124px;
+    height: 121px;
+    position: relative;
+}
+
+
+
+.iconos-tarjeta {
+    display: none;
+}
+
+.tarjetas {
+    float: right;
+    margin: 10px;
+}
+.hover-trending:hover {
+    background: rgba(87, 46, 229, 0.7);
+      
+        .iconos-tarjeta {
+            display: inline;
+        }
+        
+}
 
 .mouse:hover {
     background: rgba(87, 46, 229, 0.7);
@@ -292,7 +317,8 @@ line-height: 25px;
         
             display: inline;
         } 
-       
+
+        
 }
 
 #iconos {
