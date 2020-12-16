@@ -59,7 +59,7 @@ input.addEventListener("keyup", async (e) => {
 
     for (let i = 0; i < 4; i++) {
 
-        if (arrayTitulos[i].toLowerCase().includes(textoIngresado)) {
+        if (arrayTitulos[i].toLowerCase().includes(textoIngresado.toLowerCase())) {
 
             let elementoLista = document.createElement("div")
             elementoLista.id = "lista"
@@ -77,7 +77,7 @@ input.addEventListener("keyup", async (e) => {
                 
                 iconSearch.src = "assets/icon-search.svg"
                 
-                //search();
+                search();
             })
         }
 
@@ -189,6 +189,7 @@ function search() {
         iconFav.addEventListener("click", () => {
             iconFav.src = "./assets/icon-fav-active.svg"
 
+
             if (localStorage.getItem("arrayFavoritos")) {
                 let arrayFavoritos = localStorage.getItem("arrayFavoritos")
                 arrayFavoritos = JSON.parse(arrayFavoritos)
@@ -212,11 +213,31 @@ function search() {
         });
 
 
+        iconFav.addEventListener("mouseover", () => {
+           iconFav.src = "./assets/icon-fav-hover.svg"
+
+        });
+
+        iconFav.addEventListener("mouseleave", () => {
+          iconFav.src = "./assets/icon-fav.svg"
+
+        });
+
         //evento de descarga
         iconDownload.addEventListener("click", () => {
 
             downloadGif(arrayGifos[i])
             iconDownload.src = "./assets/icon-download-hover.svg"
+
+        });
+
+        iconDownload.addEventListener("mouseover", () => {
+            iconDownload.src = "./assets/icon-download-hover.svg"
+
+        });
+
+        iconDownload.addEventListener("mouseleave", () => {
+            iconDownload.src = "./assets/icon-download.svg"
 
         });
 
@@ -241,7 +262,11 @@ function search() {
             a.href = "expandir.html"
 
         });
+        iconMax.addEventListener("mouseleave", () => {
 
+            iconMax.src = "./assets/icon-max-normal.svg"
+
+        });
 
     }
 

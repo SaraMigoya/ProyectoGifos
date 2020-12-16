@@ -159,6 +159,17 @@ async function main() {
                 localStorage.setItem("arrayFavoritos", JSON.stringify(arrayFavoritos));
             }
         });
+
+
+        iconFav1.addEventListener("mouseover", () => {
+            iconFav1.src = "./assets/icon-fav-hover.svg"
+ 
+         });
+ 
+         iconFav1.addEventListener("mouseleave", () => {
+           iconFav1.src = "./assets/icon-fav.svg"
+ 
+         });
         if (iconFav2)
         iconFav2.addEventListener("click", () => {
             iconFav2.src = "./assets/icon-fav-active.svg"
@@ -182,6 +193,16 @@ async function main() {
                 localStorage.setItem("arrayFavoritos", JSON.stringify(arrayFavoritos));
             }
         });
+
+        iconFav2.addEventListener("mouseover", () => {
+            iconFav2.src = "./assets/icon-fav-hover.svg"
+ 
+         });
+ 
+         iconFav2.addEventListener("mouseleave", () => {
+           iconFav2.src = "./assets/icon-fav.svg"
+ 
+         });
         if (iconFav3)
         iconFav3.addEventListener("click", () => {
             iconFav3.src = "./assets/icon-fav-active.svg"
@@ -206,6 +227,16 @@ async function main() {
             }
         });
 
+        iconFav3.addEventListener("mouseover", () => {
+            iconFav3.src = "./assets/icon-fav-hover.svg"
+ 
+         });
+ 
+         iconFav3.addEventListener("mouseleave", () => {
+           iconFav3.src = "./assets/icon-fav.svg"
+ 
+         });
+
     
         //evento de descarga
         if (iconDownload1)
@@ -213,6 +244,15 @@ async function main() {
         downloadGif(arrayImagenes[0])
     
          });
+         iconDownload1.addEventListener("mouseover", () => {
+            iconDownload1.src = "./assets/icon-download-hover.svg"
+
+        });
+
+        iconDownload1.addEventListener("mouseleave", () => {
+            iconDownload1.src = "./assets/icon-download.svg"
+
+        });
 
         //evento de descarga
         if (iconDownload2)
@@ -220,11 +260,29 @@ async function main() {
             downloadGif(arrayImagenes[1])
         
         });
+        iconDownload2.addEventListener("mouseover", () => {
+            iconDownload2.src = "./assets/icon-download-hover.svg"
+
+        });
+
+        iconDownload2.addEventListener("mouseleave", () => {
+            iconDownload2.src = "./assets/icon-download.svg"
+
+        });
         //evento de descarga
         if (iconDownload3)
         iconDownload3.addEventListener("click", () => {
         downloadGif(arrayImagenes[2])
     
+        });
+        iconDownload3.addEventListener("mouseover", () => {
+            iconDownload3.src = "./assets/icon-download-hover.svg"
+
+        });
+
+        iconDownload3.addEventListener("mouseleave", () => {
+            iconDownload3.src = "./assets/icon-download.svg"
+
         });
 
         //evento expandir
@@ -241,7 +299,15 @@ async function main() {
 
 
         });
+        iconMax1.addEventListener("mouseover", () => {
+            iconMax1.src =  "./assets/icon-max-hover.svg"
 
+        });
+
+       iconMax1.addEventListener("mouseleave", () => {
+            iconMax1.src = "./assets/icon-max-normal.svg"
+
+        });
       
         if(iconMax2)
          iconMax2.addEventListener("click", () => {
@@ -255,6 +321,15 @@ async function main() {
             localStorage.setItem("user", `${arrayUser[1]}`)
 
         });
+        iconMax2.addEventListener("mouseover", () => {
+            iconMax2.src =  "./assets/icon-max-hover.svg"
+
+        });
+
+       iconMax2.addEventListener("mouseleave", () => {
+            iconMax2.src = "./assets/icon-max-normal.svg"
+
+        });
         if(iconMax3)
         iconMax3.addEventListener("click", () => {
             localStorage.removeItem("img")
@@ -265,6 +340,15 @@ async function main() {
             localStorage.setItem("fav", `${imagenesGifos3.src}`)
             localStorage.setItem("tituloImg", `${arrayTituloGifos[2]}`)
             localStorage.setItem("user", `${arrayUser[2]}`)
+
+        });
+        iconMax3.addEventListener("mouseover", () => {
+            iconMax3.src =  "./assets/icon-max-hover.svg"
+
+        });
+
+       iconMax3.addEventListener("mouseleave", () => {
+            iconMax3.src = "./assets/icon-max-normal.svg"
 
         });
 
