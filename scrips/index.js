@@ -4,6 +4,7 @@ let arrayGifos;
 let arrayUserName;
 let arrayVermas;
 let input = document.getElementById("input")
+let textoIngresado;
 
 
 let probando = document.getElementById("probando")
@@ -14,10 +15,12 @@ input.addEventListener("keyup", async (e) => {
     cerrarDiv("#divSugerencias")
 
     let textoIngresado = e.target.value
+    textoIngresado.id = "texto-ingresado"
     let iconSearch = document.getElementById("icon-search");
     iconSearch.src = "assets/close.svg"
 
     if (textoIngresado.length == 0) {
+        iconSearch.classList.remove("iconos-tarjeta")
         iconSearch.src = "assets/icon-search.svg"
         probando.classList.remove("buscador-expandido")
         return
@@ -69,22 +72,29 @@ input.addEventListener("keyup", async (e) => {
             imgsearch.src = "assets/icon-search-copia.svg"
             probando.classList.add("buscador-expandido")
 
+
+
             div.appendChild(elementoLista)
             elementoLista.appendChild(imgsearch)
 
             elementoLista.addEventListener("click", () => {
                 input.value = elementoLista.innerText;
                 
-                iconSearch.src = "assets/icon-search.svg"
+                iconSearch.src = "./assets/icon-search.svg"
                 
                 search();
             })
+
         }
+        
 
         if (e.keyCode == 13) {
             search()
-            iconSearch.src = "assets/icon-search.svg"
+           iconSearch.classList.add("iconos-tarjeta")
+          
         }
+
+        
     };
    
 
@@ -319,16 +329,25 @@ function cerrarDiv(x) {
 }
 
 
+
 //Evento que elimina todas las sugerencias con la cruz
 iconSearch.addEventListener("click", () => {
 
     if (iconSearch.src = "./assets/close.svg") {
+      
+        iconSearch.src= "assets/icon-search.svg"
+        input.value = ""
 
         cerrarDiv("#divSugerencias")
-        probando.classList.remove("buscador-expandido")
+        probando.classList.add("buscador-expandido")
 
+            //iconSearch.classList.add("iconos-tarjeta")
+        
+    
+  
     }
 
+   
 
     //modifico el icono close a modo nocturno
     if (localStorage.getItem("dark-mode") == "true") {

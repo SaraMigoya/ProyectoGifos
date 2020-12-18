@@ -24,10 +24,41 @@ comenzar.addEventListener("click", () => {
     p.innerHTML = "El acceso a tu camara será válido sólo por el tiempo en el que estés creando el GIFO.";
     comenzar.classList.add("sacar-texto")
 
+
+    btnStop.disabled = true;
+    captureCamera((camera) => {
+      
+        video.srcObject = camera;
+
+        video.play();
+
+
+        recorder = RecordRTC(camera, {
+            type: 'gif',
+            frameRate: 1,
+            quality: 10,
+            width: 360,
+            hidden: 240,
+            onGifRecordingStarted: function () {
+                console.log('grabacion iniciada')
+            },
+        });
+        recorder.camera = camera
+        btnRecord.classList.remove("desaparecer")
+
+
+        btnStart.src = "./assets/paso-a-paso-hover-1.svg";
+        video.classList.add("video-activo")
+        video.classList.remove("video")
+        h1.classList.add("sacar-texto")
+        p.classList.add("sacar-texto")
+    
+
+    });
 })
 
 //inicio
-btnStart.addEventListener('click', () => {
+/*btnStart.addEventListener('click', () => {
     btnRecord.classList.remove("desaparecer")
 
 
@@ -60,7 +91,7 @@ btnStart.addEventListener('click', () => {
         recorder.camera = camera
 
     });
-});
+});*/
 
 //grabo
 btnRecord.addEventListener('click', () => {
