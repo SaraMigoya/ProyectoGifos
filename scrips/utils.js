@@ -137,7 +137,7 @@ async function main() {
         iconFav1.addEventListener("click", () => {
             iconFav1.src = "./assets/icon-fav-active.svg"
 
-            if (localStorage.getItem("arrayFavoritos") !== imagenesGifos1.src) {
+            if (localStorage.getItem("arrayFavoritos")) {
                 let arrayFavoritos = localStorage.getItem("arrayFavoritos")
                 arrayFavoritos = JSON.parse(arrayFavoritos)
 

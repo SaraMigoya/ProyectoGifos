@@ -213,15 +213,7 @@ function search() {
         });
 
 
-        iconFav.addEventListener("mouseover", () => {
-           iconFav.src = "./assets/icon-fav-hover.svg"
 
-        });
-
-        iconFav.addEventListener("mouseleave", () => {
-          iconFav.src = "./assets/icon-fav.svg"
-
-        });
 
         //evento de descarga
         iconDownload.addEventListener("click", () => {
