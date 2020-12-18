@@ -340,8 +340,7 @@ iconSearch.addEventListener("click", () => {
 
         cerrarDiv("#divSugerencias")
         probando.classList.add("buscador-expandido")
-
-            //iconSearch.classList.add("iconos-tarjeta")
+        iconSearch.classList.add("iconos-tarjeta")
         
     
   
