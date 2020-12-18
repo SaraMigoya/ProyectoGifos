@@ -343,7 +343,7 @@ h1 span {
 }
 
 .hover-trending:hover {
-  background: rgba(87, 46, 229, 0.7);
+  background: rgba(87, 46, 229, 0.5);
 }
 
 .hover-trending:hover .iconos-tarjeta {
@@ -351,7 +351,7 @@ h1 span {
 }
 
 .mouse:hover {
-  background: rgba(87, 46, 229, 0.7);
+  background: rgba(87, 46, 229, 0.5);
 }
 
 .mouse:hover #iconos {
@@ -615,7 +615,7 @@ label {
     position: relative;
   }
   .mouse:hover {
-    background: rgba(87, 46, 229, 0.7);
+    background: rgba(87, 46, 229, 0.5);
   }
   .mouse:hover #iconos {
     display: inline;

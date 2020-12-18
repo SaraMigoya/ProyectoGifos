@@ -7,9 +7,7 @@ let img = document.getElementById("imagenesGifos")
 let imagen = localStorage.getItem("img")
 img.src = localStorage.getItem("img")
 carousel.appendChild(img)
-
-
-
+ 
 
 //Evento que descarga de imágenes
 let download = document.getElementById("icon-download")
@@ -33,15 +31,8 @@ iconFav.addEventListener("click", () => {
         arrayFavoritos = JSON.parse(arrayFavoritos)
 
 
-
-
         let fav = localStorage.getItem("fav")
-
-
-
         arrayFavoritos.push(`${fav}`)
-
-  
         localStorage.setItem("arrayFavoritos", JSON.stringify(arrayFavoritos))
 
         
@@ -51,10 +42,6 @@ iconFav.addEventListener("click", () => {
         let arrayFavU = []
 
         let fav = localStorage.getItem("fav")
-
-
-
-
         arrayFavoritos.push(`${fav}`)
         arrayFavU.push(`${u}`)
         arrayFavNom.push(`${nombre}`)

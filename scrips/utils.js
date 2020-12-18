@@ -137,7 +137,7 @@ async function main() {
         iconFav1.addEventListener("click", () => {
             iconFav1.src = "./assets/icon-fav-active.svg"
 
-            if (localStorage.getItem("arrayFavoritos")) {
+            if (localStorage.getItem("arrayFavoritos") !== imagenesGifos1.src) {
                 let arrayFavoritos = localStorage.getItem("arrayFavoritos")
                 arrayFavoritos = JSON.parse(arrayFavoritos)
 
@@ -358,12 +358,6 @@ async function main() {
             arrayTituloGifos.push(element.title)
         });
 
-      
-       // arrayUser = []
-
-        //resultado.data.forEach(element => {
-            //arrayUser.push(element.username)
-       // })
 
        
  

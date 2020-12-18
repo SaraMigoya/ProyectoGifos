@@ -88,11 +88,29 @@ async function main() {
 
 
         })
+        iconTrash.addEventListener("mouseover", () => {
+            iconTrash.src = "./assets/icon-trash-hover.svg"
+
+        });
+
+        iconTrash.addEventListener("mouseleave", () => {
+            iconTrash.src = "./assets/icon-trash-normal.svg"
+
+        });
 
         //evento de descarga
         iconDownload.addEventListener("click", () => {
 
             downloadGif(arrayFavoritos[i])
+
+        });
+        iconDownload.addEventListener("mouseover", () => {
+            iconDownload.src = "./assets/icon-download-hover.svg"
+
+        });
+
+        iconDownload.addEventListener("mouseleave", () => {
+            iconDownload.src = "./assets/icon-download.svg"
 
         });
 
@@ -118,7 +136,15 @@ async function main() {
 
         });
 
+        iconMax.addEventListener("mouseover", () => {
+            iconMax.src =  "./assets/icon-max-hover.svg"
 
+        });
+
+       iconMax.addEventListener("mouseleave", () => {
+            iconMax.src = "./assets/icon-max-normal.svg"
+
+        });
 
     }
 

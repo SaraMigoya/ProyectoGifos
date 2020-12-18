@@ -91,6 +91,15 @@ if (arrayFavoritos == "null" || arrayFavoritos.length == 0){
 
 
             })
+            iconFav.addEventListener("mouseover", () => {
+                iconFav.src = "./assets/icon-fav-hover.svg"
+     
+             });
+     
+             iconFav.addEventListener("mouseleave", () => {
+               iconFav.src = "./assets/icon-fav.svg"
+     
+             });
 
             //evento de descarga
             iconDownload.addEventListener("click", () => {
@@ -99,7 +108,15 @@ if (arrayFavoritos == "null" || arrayFavoritos.length == 0){
 
             });
 
-
+            iconDownload.addEventListener("mouseover", () => {
+                iconDownload.src = "./assets/icon-download-hover.svg"
+    
+            });
+    
+            iconDownload.addEventListener("mouseleave", () => {
+                iconDownload.src = "./assets/icon-download.svg"
+    
+            });
             // evento max
             iconMax.addEventListener("mouseover", () => {
                 localStorage.setItem("img", arrayFavoritos[i])
@@ -117,6 +134,11 @@ if (arrayFavoritos == "null" || arrayFavoritos.length == 0){
 
                 a.href = "favoritos-exp.html"
 
+            });
+            iconMax.addEventListener("mouseleave", () => {
+    
+                iconMax.src = "./assets/icon-max-normal.svg"
+    
             });
         };
 
@@ -189,11 +211,29 @@ if (arrayFavoritos == "null" || arrayFavoritos.length == 0){
 
 
             })
+            iconFav.addEventListener("mouseover", () => {
+                iconFav.src = "./assets/icon-fav-hover.svg"
+     
+             });
+     
+             iconFav.addEventListener("mouseleave", () => {
+               iconFav.src = "./assets/icon-fav.svg"
+     
+             });
             //evento de descarga
             iconDownload.addEventListener("click", () => {
-
+                iconDownload.src = "./assets/icon-download-hover.svg"
                 downloadGif(arrayFavoritos[i])
 
+            });
+            iconDownload.addEventListener("mouseover", () => {
+                iconDownload.src = "./assets/icon-download-hover.svg"
+    
+            });
+    
+            iconDownload.addEventListener("mouseleave", () => {
+                iconDownload.src = "./assets/icon-download.svg"
+    
             });
             // evento max
             iconMax.addEventListener("mouseover", () => {
@@ -213,6 +253,13 @@ if (arrayFavoritos == "null" || arrayFavoritos.length == 0){
                 a.href = "favoritos-exp.html"
 
             });
+
+            iconMax.addEventListener("mouseleave", () => {
+    
+                iconMax.src = "./assets/icon-max-normal.svg"
+    
+            });
+    
        
         }
 
