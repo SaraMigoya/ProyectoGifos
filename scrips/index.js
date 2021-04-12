@@ -17,11 +17,16 @@ input.addEventListener("keyup", async (e) => {
     let textoIngresado = e.target.value
     textoIngresado.id = "texto-ingresado"
     let iconSearch = document.getElementById("icon-search");
-    iconSearch.src = "assets/close.svg"
+
+        iconSearch.src = "assets/close.svg"
+
+        iconSearch.classList.remove("icon-search-close")
+
 
     if (textoIngresado.length == 0) {
         iconSearch.classList.remove("iconos-tarjeta")
         iconSearch.src = "assets/icon-search.svg"
+        iconSearch.classList.add("icon-search-close")
         probando.classList.remove("buscador-expandido")
         return
     }
@@ -341,12 +346,9 @@ iconSearch.addEventListener("click", () => {
         cerrarDiv("#divSugerencias")
         probando.classList.add("buscador-expandido")
         iconSearch.classList.add("iconos-tarjeta")
-        
-    
   
     }
 
-   
 
     //modifico el icono close a modo nocturno
     if (localStorage.getItem("dark-mode") == "true") {
